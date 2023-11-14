@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>barberLanding</title>
-</head>
-<body>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
     <header>
-        <div class="logo_container">
-            <a href=""><h1>Logo</h1></a>
+      <div class="logo_container">
+        <a href=""><h1>Logo</h1></a>
+      </div>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="list-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav id="list-navigation" class="list-navigation" data-visible="false">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Prices</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Schedule</a></li>
+        </ul>
+        <div class="header_buttons">
+          <a href="">Login</a>
+          <a href="">Sign Up</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Prices</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Schedule</a></li>
-            </ul>
-            <div class="header_buttons">
-                <a href="">Login</a>
-                <a href="">Sign Up</a>
-            </div>
-        </nav>
+      </nav>
     </header>
-</body>
+    <main id="home">
+      <div class="img-hero"></div>
+      <article class="container-text-hero">
+        <div class="text-hero">
+          <span>Come and</span> Change <br /><span>Your </span>Style
+        </div>
+        <a href="">Schedule</a>
+      </article>
+    </main>
+    <section class="prices_container" id="prices">
+      <article class="prices">
+        <h2 class="title_prices">Prices</h2>
+        <div class="card_prices_container">
+          <article class="card">
+            <h2 class="title_card">$10</h2>
+            <div>
+              <h3 class="subtitle_card">Normal <br /><span>Haircut</span></h3>
+              <p>Machine Cutting</p>
+            </div>
+            <a href="" class="card_button">Buy</a>
+          </article>
+          <article class="card">
+            <h2 class="title_card">$13</h2>
+            <div>
+              <h3 class="subtitle_card">Plus <br /><span>Haircut</span></h3>
+              <p>Machine Cutting and beard</p>
+            </div>
+            <a href="" class="card_button">Buy</a>
+          </article>
+          <article class="card">
+            <h2 class="title_card">$20</h2>
+            <div>
+              <h3 class="subtitle_card">Premium <br /><span>Haircut</span></h3>
+              <p>Machine Cutting, beard and color</p>
+            </div>
+            <a href="" class="card_button">Buy</a>
+          </article>
+        </div>
+      </article>
+    </section>
+  </body>
 </html>

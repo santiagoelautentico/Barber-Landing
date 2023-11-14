@@ -1,93 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-*{
-    text-decoration: none;
-    font-family: 'Poppins';
-    box-sizing: border-box;
-    margin: 0;padding: 0;
-    overflow-x: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@font-face {
+  font-family: "fontTitle";
+  src: url(./src/fonts/BasementGrotesque-Black_v1.202.otf);
 }
-body{
-    background-color: black;
+@font-face {
+  font-family: aileronRegular;
+  src: url(./src/fonts/Aileron-Regular.otf);
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    color: white;
+@font-face {
+  font-family: aileronBold;
+  src: url(./src/fonts/Aileron-Bold.otf);
 }
-.logo_container{
-    padding: 2em;
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-.logo_container a{
-    color: white;
+body {
+  background-color: black;
 }
-header nav{
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    position: fixed;
-    inset: 0 0 0 30%;
-    padding: min(10vh, 5em) 3em;
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
-    font-size: 1.2em;
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  color: white;
 }
-header nav ul{
-    padding-bottom: 4em;
+.logo_container {
+  padding: 1.5em;
+  font-family: fontTitle;
 }
-header nav ul li{
-    padding-bottom: 0.5em;
+.logo_container a {
+  color: white;
 }
-header nav ul li a{
-    color: white;
+.list-navigation {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  position: fixed;
+  inset: 0 0 0 30%;
+  padding: min(10vh, 5em) 3em;
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(1rem);
+  font-size: 1.2em;
+  transform: translateX(100%);
+  transition: transform 350ms ease-in;
+  font-family: aileronRegular;
 }
-.header_buttons a{
-    padding: 0.8em;
-    display: flex;
-    justify-content: center;
+.list-navigation[data-visible="true"] {
+  transform: translateX(0%);
+}
+header nav ul {
+  padding-bottom: 4em;
+}
+header nav ul li {
+  padding-bottom: 0.5em;
+}
+header nav ul li a {
+  color: white;
+}
+.header_buttons a {
+  padding: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.header_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_buttons a:nth-of-type(1) {
+  background-color: #e4f422;
+  color: black;
+}
+.header_buttons a:nth-of-type(2) {
+  background-color: #0047ff;
+  color: white;
+}
+.mobile-nav-toggle {
+  position: absolute;
+  background: url(./src/navI-icon.png);
+  width: 3em;
+  aspect-ratio: 1;
+  top: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+.sr-only {
+  display: none;
+}
+
+/*Hero Section*/
+#home {
+  max-width: 1300px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: #e4f422;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-hero {
+  background: url(./src/heroFoto.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+.text-hero {
+  margin-top: 1em;
+}
+.text-hero {
+  font-size: 4em;
+  font-family: "fontTitle";
+}
+.text-hero span {
+  font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e4f422;
+  color: black;
+}
+.container-text-hero a {
+  background-color: #0047ff;
+  color: white;
+  font-size: 2em;
+  align-items: center;
+  display: flex;
+  margin: 1em 4em 2em 4em;
+  padding: 0.5em 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: aileronBold;
+}
+
+/* Prices */
+
+.prices_container {
+  background: #0047ff url(./src/grid.png);
+  padding: 4em 0;
+}
+.prices {
+  max-width: 1350px;
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+}
+.title_prices {
+  font-size: 4em;
+  text-align: center;
+  font-family: fontTitle;
+  color: #e4f422;
+  margin: 0 0 1em 0;
+}
+.card_prices_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+.card {
+  width: 60%;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #e4f422;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: solid 4px black;
+}
+.title_card {
+  font-size: 3em;
+  font-family: "fontTitle";
+}
+.subtitle_card {
+  font-size: 2.3em;
+  font-family: "fontTitle";
+}
+.subtitle_card span {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  color: #e4f422;
+}
+.card p {
+  font-family: "aileronBold";
+  font-size: 1.3em;
+}
+.card_button {
+  font-family: "fontTitle";
+  background-color: black;
+  color: white;
+  padding: 1em 0;
+  margin: 0 25%;
+  border-radius: 5px;
+}
+@media all and (min-width: 1100px) {
+  header {
+    padding: 1.5em;
     align-items: center;
+  }
+  .list-navigation {
+    display: flex;
+    flex-direction: row;
     font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 1em;
-}
-.header_buttons{
+    position: relative;
+    inset: auto;
+    padding: min(10vh, 5em) 3em;
+    background: none;
+    font-size: 1.2em;
+    padding: 0;
+  }
+  header nav ul {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    padding: 0;
+  }
+  .header_buttons {
+    flex-direction: row;
+    padding: 1em;
+    gap: 1em;
+  }
+  .mobile-nav-toggle {
+    display: none;
+  }
+  .list-navigation[data-visible="false"] {
+    transform: translateX(0%);
+  }
+  .card_prices_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+  }
+  .card {
+    width: 30%;
+    height: 40vh;
+    justify-content: center;
+    background-color: #e4f422;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.header_buttons a:nth-of-type(1){
-    background-color: #E4F422;
-    color: black;
-}
-.header_buttons a:nth-of-type(2){
-    background-color: #0047FF;
-    color: white;
-}
-@media all and (min-width:1100px){
-    header{
-        padding: 3em;
-        align-items: center;
-    }
-    header nav{
-        display: flex;
-        flex-direction: row;
-        font-weight: bold;
-        position: relative;
-        inset: auto;
-        padding: min(10vh, 5em) 3em;
-        background: none;
-        font-size: 1.2em;
-        padding: 0;
-    }
-    header nav ul{
-        display: flex;
-        gap: 1.5em;
-        align-items: center;
-        padding: 0;
-    }
-    .header_buttons{
-        flex-direction: row;
-        padding: 1em;
-        gap: 1em;
-    }
+    gap: 1em;
+  }
 }
