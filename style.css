@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    text-decoration: none;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    overflow-x: hidden;
+}
+body{
+    background-color: black;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    color: white;
+}
+.logo_container{
+    padding: 2em;
+}
+.logo_container a{
+    color: white;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(10vh, 5em) 3em;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+    font-size: 1.2em;
+}
+header nav ul{
+    padding-bottom: 4em;
+}
+header nav ul li{
+    padding-bottom: 0.5em;
+}
+header nav ul li a{
+    color: white;
+}
+.header_buttons a{
+    padding: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+.header_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header_buttons a:nth-of-type(1){
+    background-color: #E4F422;
+    color: black;
+}
+.header_buttons a:nth-of-type(2){
+    background-color: #0047FF;
+    color: white;
+}
+@media all and (min-width:1100px){
+    header{
+        padding: 3em;
+        align-items: center;
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+        font-weight: bold;
+        position: relative;
+        inset: auto;
+        padding: min(10vh, 5em) 3em;
+        background: none;
+        font-size: 1.2em;
+        padding: 0;
+    }
+    header nav ul{
+        display: flex;
+        gap: 1.5em;
+        align-items: center;
+        padding: 0;
+    }
+    .header_buttons{
+        flex-direction: row;
+        padding: 1em;
+        gap: 1em;
+    }
+}
