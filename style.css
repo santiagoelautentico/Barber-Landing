@@ -204,10 +204,73 @@ header nav ul li a {
   background-color: black;
   color: white;
   padding: 1em 0;
-  margin: 0 25%;
+  margin: 1em 25% 0 25%;
   border-radius: 5px;
 }
-@media all and (min-width: 1100px) {
+
+/* About Us */
+.aboutUs_container {
+  max-width: 1350px;
+  width: 90%;
+  margin: auto;
+  padding: 3em 0;
+}
+.aboutUs_title {
+  font-size: 4em;
+  color: #e4f422;
+  font-family: "fontTitle";
+  text-align: center;
+  padding: 0 0 1em 0;
+}
+.barber_article {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.foto_barber1 {
+  background: url(./src/barber1_optimize.jpg);
+  width: 80%;
+  background-position: center;
+  height: 35vh;
+  border-radius: 15px;
+}
+
+.foto_barber2 {
+  background: url(./src/barber2_optimize.jpg);
+  width: 80%;
+  background-position: center;
+  height: 35vh;
+  border-radius: 15px;
+}
+.text_article_aboutUs {
+  width: 80%;
+  font-family: "aileronRegular";
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+}
+.title_article_aboutUs {
+  font-family: "fontTitle";
+  color: #e4f422;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 0;
+}
+.galery_container{
+  background-color: #e4f422;
+}
+.galery_article{
+  width: 90%;
+  max-width: 1350px;
+  margin: auto;
+}
+.galery_foto{
+  width: auto;
+  height: auto;
+  max-width: 80%;
+}
+@media all and (min-width: 850px) {
   header {
     padding: 1.5em;
     align-items: center;
@@ -255,5 +318,29 @@ header nav ul li a {
     display: flex;
     flex-direction: column;
     gap: 1em;
+  }
+  .text_article_aboutUs {
+    width: 47%;
+    font-family: "aileronRegular";
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 2.5em;
+  }
+  .foto_barber1 {
+    background: url(./src/barber1_optimize.jpg);
+    width: 47%;
+    background-position: center;
+    height: 45vh;
+  }
+
+  .foto_barber2 {
+    background: url(./src/barber2_optimize.jpg);
+    width: 47%;
+    background-position: center;
+    height: 45vh;
+  }
+  .title_article_aboutUs {
+    text-align: left;
   }
 }
