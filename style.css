@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @font-face {
-  font-family: "fontTitle";
+  font-family: fontTitle;
   src: url(./src/fonts/BasementGrotesque-Black_v1.202.otf);
 }
 @font-face {
@@ -16,7 +16,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 body {
   background-color: black;
@@ -209,11 +208,14 @@ header nav ul li a {
 }
 
 /* About Us */
+#aboutUs {
+  position: relative;
+}
 .aboutUs_container {
   max-width: 1350px;
   width: 90%;
   margin: auto;
-  padding: 3em 0;
+  padding-top: 8rem;
 }
 .aboutUs_title {
   font-size: 4em;
@@ -257,12 +259,26 @@ header nav ul li a {
   text-align: center;
   padding: 1em 0;
 }
+
+/* Galery */
 .galery_container {
   background-color: #e4f422;
-  height: 60vh;
+  padding: 15rem 0 8rem 0;
+  --mask: radial-gradient(288.44px at 50% 400px, #000 99%, #0000 101%)
+      calc(50% - 320px) 0/640px 100%,
+    radial-gradient(288.44px at 50% -240px, #0000 99%, #000 101%) 50% 160px/640px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+.waves {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  position: absolute;
 }
 .galery_title {
-  font-family: fontTitle;
+  font-family: "fontTitle";
   text-align: center;
   font-size: 3em;
   padding: 1.5em 0 1em 0;
@@ -277,13 +293,95 @@ header nav ul li a {
   height: auto;
   max-width: 100%;
 }
-.fotos_container {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 50%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  gap: 1rem;
+
+/* Address */
+
+.address_container {
+  max-width: 1350px;
+  width: 90%;
+  margin: auto;
+  color: #e4f422;
+  font-size: 3em;
+  font-family: "fontTitle";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 5rem;
+}
+.map {
+  margin-top: 4rem;
+}
+
+/* ask */
+.ask_container {
+  background: #0047ff;
+  padding-block: 5rem;
+}
+.ask_title {
+  font-size: 3em;
+  color: #e4f422;
+  font-family: "fontTitle";
+  text-align: center;
+}
+.ask_form {
+  max-width: 1350px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.ask_input_container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "aileronBold";
+}
+.ask_input_container > label {
+  color: white;
+  font-size: 1.5em;
+}
+.input {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.3em;
+  color: black;
+  padding: 10px;
+  box-shadow: 10px 10px;
+  border: black solid 4px;
+}
+.ask_footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1350px;
+  width: 90%;
+  margin: auto;
+  padding-block: 3rem;
+}
+.ask_footer p{
+  font-family: 'aileronBold';
+  font-size: 1.2em;
+}
+.ask_button {
+  font-family: "aileronBold";
+  font-size: 1.5em;
+  color: black;
+  background-color: #e4f422;
+  padding: 1rem;
+  border-radius: 5px;
+}
+footer{
+  background-color: #e4f422;
+  padding-block: 5rem;
+  font-family: 'fontTitle';
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media all and (min-width: 850px) {
   header {
@@ -359,19 +457,40 @@ header nav ul li a {
   .title_article_aboutUs {
     text-align: left;
   }
-  .galery_foto {
-    width: auto;
-    height: auto;
-    height: 30vh;
-    max-width: 100%;
+  .fotos_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
   }
+  .ask_input_container {
+    width: 45%;
+  }
+  .input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5em;
+  }
+  .ask_footer {
+    display: flex;
+    max-width: 1350px;
+    width: 90%;
+    margin: auto;
+    padding: 4rem 6rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+  .ask_footer > p{
+    font-size: 1.5em;
+  }
+}
+@media all and (max-width: 849px) {
   .fotos_container {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 50%;
-    grid-template-rows: 2fr;
-    overflow-x: none;
-    overscroll-behavior-inline: none;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
     gap: 1rem;
   }
 }
