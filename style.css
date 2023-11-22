@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 @font-face {
-  font-family: fontTitle;
-  src: url(./src/fonts/BasementGrotesque-Black_v1.202.otf);
+  font-family: horizon;
+  src: url(./src/fonts/horizon.otf);
 }
 @font-face {
-  font-family: aileronRegular;
-  src: url(./src/fonts/Aileron-Regular.otf);
-}
-@font-face {
-  font-family: aileronBold;
-  src: url(./src/fonts/Aileron-Bold.otf);
+  font-family: horizon_outline;
+  src: url(./src/fonts/horizon_outlined.otf);
 }
 * {
   text-decoration: none;
@@ -18,7 +14,6 @@
   padding: 0;
 }
 body {
-  background-color: black;
 }
 header {
   display: flex;
@@ -28,10 +23,10 @@ header {
 }
 .logo_container {
   padding: 1.5em;
-  font-family: fontTitle;
+  font-family: horizon;
 }
 .logo_container a {
-  color: white;
+  color: black;
 }
 .list-navigation {
   display: flex;
@@ -45,7 +40,7 @@ header {
   font-size: 1.2em;
   transform: translateX(100%);
   transition: transform 350ms ease-in;
-  font-family: aileronRegular;
+  font-family: horizon;
 }
 .list-navigation[data-visible="true"] {
   transform: translateX(0%);
@@ -57,15 +52,16 @@ header nav ul li {
   padding-bottom: 0.5em;
 }
 header nav ul li a {
-  color: white;
+  color: black;
+  font-size: 0.9em;
 }
 .header_buttons a {
-  padding: 0.8em;
+  padding: 0.8em 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 15px;
   margin-bottom: 1em;
 }
 .header_buttons {
@@ -74,12 +70,16 @@ header nav ul li a {
   justify-content: center;
 }
 .header_buttons a:nth-of-type(1) {
-  background-color: #e4f422;
+  background-color: #ffff00;
   color: black;
+  border: 3px solid black;
+  box-shadow: 10px 5px 0;
 }
 .header_buttons a:nth-of-type(2) {
-  background-color: #0047ff;
+  background-color: #3300ff;
   color: white;
+  border: 3px solid black;
+  box-shadow: 10px 5px 0 black;
 }
 .mobile-nav-toggle {
   position: absolute;
@@ -103,7 +103,7 @@ header nav ul li a {
   width: 90%;
   margin: auto;
   text-align: center;
-  color: #e4f422;
+  color: #ffff00;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,43 +112,52 @@ header nav ul li a {
 .img-hero {
   background: url(./src/heroFoto.jpg);
   width: 100%;
-  height: 40vh;
+  height: 55vh;
   background-size: cover;
   background-position: center;
+  border-radius: 15px;
+  border: 4px solid black;
+  box-shadow: 15px 15px black;
 }
 .text-hero {
   margin-top: 1em;
 }
 .text-hero {
   font-size: 4em;
-  font-family: "fontTitle";
+  font-family: "horizon";
+  color: #3300ff;
 }
 .text-hero span {
-  font-weight: bold;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #e4f422;
-  color: black;
+  font-family: horizon_outline;
+  color: #3300ff;
 }
 .container-text-hero a {
   background-color: #0047ff;
   color: white;
+  font-family: horizon;
   font-size: 2em;
-  align-items: center;
-  display: flex;
-  margin: 1em 4em 2em 4em;
-  padding: 0.5em 0;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  padding: 1em;
+  margin-block: 1em;
+  display: inline-block;
   border-radius: 5px;
-  font-family: aileronBold;
+  border: 4px solid black;
+  box-shadow: 5px 5px 0 black;
+  transform: rotate(-3deg);
 }
-
+.button_container {
+  position: relative;
+}
+.arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 5%;
+  display: none;
+  z-index: 999999;
+}
 /* Prices */
 
 .prices_container {
-  background: #0047ff url(./src/grid.png);
+  background: #3300ff url(./src/grid.png);
   padding: 0.5em 0 4em 0;
 }
 .prices {
@@ -158,10 +167,10 @@ header nav ul li a {
   margin-top: 2em;
 }
 .title_prices {
-  font-size: 4em;
+  font-size: 4.5em;
   text-align: center;
-  font-family: fontTitle;
-  color: #e4f422;
+  font-family: horizon;
+  color: #ffff00;
   margin: 0 0 1em 0;
 }
 .card_prices_container {
@@ -174,32 +183,33 @@ header nav ul li a {
   width: 60%;
   border-radius: 5px;
   padding: 1em;
-  background-color: #e4f422;
+  background-color: #ffff00;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1em;
   border: solid 4px black;
+  border-radius: 15px;
 }
 .title_card {
-  font-size: 3em;
-  font-family: "fontTitle";
+  font-size: 4em;
+  font-family: "horizon";
 }
 .subtitle_card {
   font-size: 2.3em;
-  font-family: "fontTitle";
+  font-family: "horizon";
 }
 .subtitle_card span {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  color: #e4f422;
+  color: #ffff00;
 }
 .card p {
-  font-family: "aileronBold";
+  font-family: poppins, sans-serif;
   font-size: 1.3em;
 }
 .card_button {
-  font-family: "fontTitle";
+  font-family: "horizon";
   background-color: black;
   color: white;
   padding: 1em 0;
@@ -209,76 +219,68 @@ header nav ul li a {
 
 /* About Us */
 #aboutUs {
+  background-color: #F4D738;
   position: relative;
 }
 .aboutUs_container {
-  max-width: 1350px;
+  max-width: 1200px;
   width: 90%;
   margin: auto;
-  padding-top: 8rem;
+  height: 100vh;
 }
-.aboutUs_title {
-  font-size: 4em;
-  color: #e4f422;
-  font-family: "fontTitle";
+.aboutUs_title{
+  font-size: 4.5em;
   text-align: center;
-  padding: 0 0 1em 0;
+  font-family: horizon;
 }
-.barber_article {
+.barber_container{
+  position: relative;
+}
+.barber_info{
+  background-color: white;
+  border-radius: 15px;
+  border: solid 4px black;
+  padding: 2em;
+  z-index: 99999;
+  position: relative;
+  width: 90%;
+}
+.barber_info_text h2{
+  font-size: 2.5em;
+  font-family: horizon;
+  color: #3300ff;
+  margin-bottom: 0.2em;
+}
+.barber_info_text h3{
+  font-size: 1.5em;
+  font-family: horizon;
+  color: rgba(0, 0, 0, 0.343);
+  margin-bottom: 0.5em;
+}
+.barber_info_text p{
+  font-family: Poppins, sans-serif;
+}
+.barber_insta_section{
+  background-color: #FF00F5;
+  padding: 1em;
+  width: 85%;
+  z-index: 1;
+  margin-left: 7rem;
+  position: absolute;
+  height: 40vh;
+  bottom: -6rem;
+  border-radius: 15px;
   display: flex;
-  gap: 2em;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
 }
-.foto_barber1 {
-  background: url(./src/barber1_optimize.jpg);
-  width: 80%;
-  background-position: center;
-  height: 35vh;
-  border-radius: 15px;
-}
-
-.foto_barber2 {
-  background: url(./src/barber2_optimize.jpg);
-  width: 80%;
-  background-position: center;
-  height: 35vh;
-  border-radius: 15px;
-}
-.text_article_aboutUs {
-  width: 80%;
-  font-family: "aileronRegular";
-  color: white;
-  text-align: center;
-  font-size: 1.2em;
-}
-.title_article_aboutUs {
-  font-family: "fontTitle";
-  color: #e4f422;
-  font-size: 2em;
-  text-align: center;
-  padding: 1em 0;
-}
-
 /* Galery */
 .galery_container {
-  background-color: #e4f422;
+  background-color: #ffff00;
   padding: 15rem 0 8rem 0;
-  --mask: radial-gradient(288.44px at 50% 400px, #000 99%, #0000 101%)
-      calc(50% - 320px) 0/640px 100%,
-    radial-gradient(288.44px at 50% -240px, #0000 99%, #000 101%) 50% 160px/640px
-      100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
-.waves {
-  margin: 0;
-  padding: 0;
-  bottom: 0;
-  position: absolute;
-}
+
 .galery_title {
-  font-family: "fontTitle";
+  font-family: "horizon";
   text-align: center;
   font-size: 3em;
   padding: 1.5em 0 1em 0;
@@ -300,9 +302,9 @@ header nav ul li a {
   max-width: 1350px;
   width: 90%;
   margin: auto;
-  color: #e4f422;
+  color: #ffff00;
   font-size: 3em;
-  font-family: "fontTitle";
+  font-family: "horizon";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -314,13 +316,13 @@ header nav ul li a {
 
 /* ask */
 .ask_container {
-  background: #0047ff;
+  background: #3300ff;
   padding-block: 5rem;
 }
 .ask_title {
   font-size: 3em;
-  color: #e4f422;
-  font-family: "fontTitle";
+  color: #ffff00;
+  font-family: "horizon";
   text-align: center;
 }
 .ask_form {
@@ -339,7 +341,7 @@ header nav ul li a {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  font-family: "aileronBold";
+  font-family: poppins, sans-serif;
 }
 .ask_input_container > label {
   color: white;
@@ -362,22 +364,22 @@ header nav ul li a {
   margin: auto;
   padding-block: 3rem;
 }
-.ask_footer p{
-  font-family: 'aileronBold';
+.ask_footer p {
+  font-family: "poppins, sans-serif";
   font-size: 1.2em;
 }
 .ask_button {
-  font-family: "aileronBold";
+  font-family: poppins, sans-serif;
   font-size: 1.5em;
   color: black;
-  background-color: #e4f422;
+  background-color: #ffff00;
   padding: 1rem;
   border-radius: 5px;
 }
-footer{
-  background-color: #e4f422;
+footer {
+  background-color: #ffff00;
   padding-block: 5rem;
-  font-family: 'fontTitle';
+  font-family: "horizon";
   font-size: 4em;
   display: flex;
   justify-content: center;
@@ -423,19 +425,18 @@ footer{
     gap: 2em;
   }
   .card {
-    width: 30%;
+    width: 28%;
     height: auto;
     justify-content: center;
-    background-color: #e4f422;
+    background-color: #ffff00;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1em;
-    padding: 3em 0;
+    padding: 4em 0;
   }
   .text_article_aboutUs {
-    width: 47%;
-    font-family: "aileronRegular";
+    font-family: poppins, sans-serif;
     color: white;
     text-align: left;
     font-size: 1em;
@@ -480,8 +481,15 @@ footer{
     align-items: center;
     gap: 2rem;
   }
-  .ask_footer > p{
+  .ask_footer > p {
     font-size: 1.5em;
+  }
+  .arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+    display: block;
+    z-index: 999999;
   }
 }
 @media all and (max-width: 849px) {
